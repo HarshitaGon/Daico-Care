@@ -1,21 +1,22 @@
-
 @import url(https://fonts.google.com/specimen/Poppins);
 
 :root {
-    --main-color:#29d978;
-    --primary:#f0fff7;
+    --main-color: #29d978;
+    --primary: #f0fff7;
     --black: #141414;
     --white: #fff;
     --bg: #f2f2f2;
     --light-black: #666;
 }
 
-*{
+* {
     font-family: 'Poppins', sans-serif;
-    margin: 0; padding: 0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     outline: none;
-    border: none; text-decoration: none;
+    border: none;
+    text-decoration: none;
     text-transform: capitalize;
     transition: .2s linear;
 }
@@ -72,7 +73,8 @@ section {
 
 .header {
     position: fixed;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     right: 0;
     z-index: 1000;
     display: flex;
@@ -80,7 +82,7 @@ section {
     justify-content: space-between;
     padding: 2rem 9%;
     background: var(--primary);
-    box-shadow: 0 .5rem 1 rem rgba(0,0,0,0.1);
+    box-shadow: 0 .5rem 1 rem rgba(0, 0, 0, 0.1);
 }
 
 .header .logo {
@@ -460,8 +462,10 @@ section {
 .reviews .slide p::before {
     content: '';
     position: absolute;
-    bottom: -1.5rem; left: .7rem;
-    height: 3rem; width: 3rem;
+    bottom: -1.5rem;
+    left: .7rem;
+    height: 3rem;
+    width: 3rem;
     background: var(--primary);
     transform: rotate(45deg);
 }
@@ -608,7 +612,9 @@ section {
 
     .header .navbar {
         position: absolute;
-        top: 99%; left: 0; right: 0;
+        top: 99%;
+        left: 0;
+        right: 0;
         background: var(--primary);
         border-top: .1rem solid #aaa;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);

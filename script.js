@@ -1,12 +1,12 @@
 let navbar = document.querySelector('.header .navbar');
 let menu = document.querySelector('#menu');
 
-menu.onclick=() =>{
+menu.onclick = () => {
     menu.classList.toggle('fa-times');
     navbar.classList.toggle('active');
 };
 
-window.onscroll=() =>{
+window.onscroll = () => {
     menu.classList.remove('fa-times');
     navbar.classList.remove('active');
 
@@ -14,35 +14,35 @@ window.onscroll=() =>{
 
 
 
-$(document).ready(function(){
-    $('.buttons').click(function(){
+$(document).ready(function () {
+    $('.buttons').click(function () {
         $(this).addClass('active').siblings().removeClass('active');
-        var filter=$(this).attr('data-filter')
+        var filter = $(this).attr('data-filter')
 
-        if(filter=='all'){
+        if (filter == 'all') {
             $('.diet .box').show(400);
 
         }
-        else{
-            $('.diet .box').not('.'+filter).hide(200);
-            $('.diet .box').filter('.'+filter).show(400);
+        else {
+            $('.diet .box').not('.' + filter).hide(200);
+            $('.diet .box').filter('.' + filter).show(400);
         }
     });
 });
 
 
-var swiper=new Swiper('.review-slider',{
+var swiper = new Swiper('.review-slider', {
     loop: true,
     grabCursor: true,
     spaceBetween: 20,
     breakpoints: {
-        0:{
+        0: {
             slidesPerView: 1,
         },
-        640:{
+        640: {
             slidesPerView: 2,
         },
-        768:{
+        768: {
             slidesPerView: 3,
         },
     },
