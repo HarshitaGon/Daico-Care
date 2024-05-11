@@ -1,0 +1,134 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f1f1f1;
+    border-radius:5px ;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+.avatar {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.phone-container,
+.password-container {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="tel"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    opacity: 0.8;
+}
+
+.or-container {
+    margin: 20px 0;
+}
+
+.or-container hr {
+    border: 1px solid #ccc;
+    width: 40%;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.or-container span {
+    font-size: 14px;
+    color: #ccc;
+}
+
+a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+.email{
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 19px; /* Adjust as needed */
+    text-decoration: none; /* Remove default underline */
+    color: #333; /* Adjust text color */
+}
+.email-logo {
+    width: 20px; /* Adjust size as needed */
+    height: auto;
+    vertical-align: middle; /* Align with text */
+    margin-right: 5px; /* Adjust spacing */
+}
+
+.create-account {
+    display: block;
+    text-align:left;
+    margin-top: 10px; /* Adjust as needed */
+}
+.account{
+    color: #c13a1c;
+    /* cursor: pointer; */
+}
+
+.terms-agreement  {
+    display: inline-flex;
+    text-align: left;
+    margin-top: px; /* Adjust as needed */
+    label input[type="checkbox"] {
+        margin-right: 10px;
+        /* align-items: center; */
+
+}
+}
+add{
+    textcolour: #c13a1c;
+}
+
+
+
