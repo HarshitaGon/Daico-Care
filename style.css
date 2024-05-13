@@ -357,6 +357,55 @@ section {
 
 /* end */
 
+/* workout */
+
+.workout .workout-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.workout .workout-item .box {
+    background: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.workout .workout-item .box:hover .image img {
+    transform: scale(1.1);
+}
+
+.workout .workout-item .box .image {
+    height: 25rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+.workout .workout-item .box .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.workout .workout-item .box .content {
+    padding: 2rem;
+}
+
+.workout .workout-item .box .content .link {
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.workout .workout-item .box .content p {
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    color: var(--light-black);
+    line-height: 2;
+}
+
+/* end */
+
 /* pricing */
 
 .pricing {
@@ -494,54 +543,6 @@ section {
 
 /* end */
 
-/* newsletter */
-
-.newsletter {
-    background: url(https://png.pngtree.com/background/20210709/original/pngtree-world-diabetes-day-diabetes-medical-health-picture-image_931227.jpg);
-    background-position: center;
-    background-size: cover;
-}
-
-.newsletter .content {
-    max-width: 70rem;
-    margin: 1rem auto;
-    text-align: center;
-}
-
-.newsletter .content p {
-    font-size: 1.5rem;
-    line-height: 2;
-    color: var(--black);
-
-}
-
-.newsletter .content form {
-    margin-top: 2rem;
-    background: var(--white);
-    border-radius: .5rem;
-    border: .2rem solid var(--main-color);
-    padding: .8rem;
-    display: flex;
-}
-
-.newsletter .content form .email {
-    width: 100%;
-    font-size: 1.6rem;
-    color: var(--main-color);
-    padding: 0 1.3rem;
-    text-transform: capitalize;
-}
-
-.newsletter .content form .btn {
-    margin-top: 0;
-    background: none;
-}
-
-.newsletter .content form .btn:hover {
-    background: var(--main-color);
-}
-
-/* end */
 
 /* footer */
 

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="your_logo.png" alt="Company Logo" class="avatar"> -->
+        <h1>sign up</h1>
+        <form action="./dashboard.html">
+            <div class="phone-container">
+                <label for="phone"></label>
+                <input type="tel" id="phone" name="phone" placeholder="Full Name" required>
+            </div>
+            <div class="password-container">
+                <label for="password"></label>
+                <input type="password" id="password" name="password" placeholder="Email" required>
+            </div>
+            <div>
+                <h2>Medical details</h2>
+                <div class="sugar-level">
+                    <label for="blood-sugar"></label>
+                    <input type="number" id="blood-sugar" name="blood-sugar" placeholder="Blood Sugar Levels (mg/dl)" required>
+                </div>
+                <div class="hba1c-level">
+                    <label for="hba1c"></label>
+                    <input type="number" id="hba1c" name="hba1c" placeholder="HbA1c Levels (%)" required>
+                </div>
+                <div class="weight-container">
+                    <label for="weight"></label>
+                    <input type="number" id="weight" name="weight" placeholder="Weight (kg)" required>
+                </div>
+                <div class="blood-pressure">
+                    <label for="pressure"></label>
+                    <input type="fraction" id="pressure" name="pressure" placeholder="Blood Pressure (mm Hg)" required>
+                </div>
+            </div>
+            <div class="terms-agreement">
+                <input type="checkbox" id="agreement" name="agreement" required>
+                <label for="agreement">I agree to Diaco Care <span style="color: red;">Terms of Service</span>,
+                <span style="color: red;">Policy</span>,
+                and <span style="color: red;">Content Policies</span></label>
+            </div>
+            <button type="submit">Create account</button>
+            <div class="or-container">
+                <hr>
+                <span>or</span>
+                <hr>
+            </div>
+
+            <a href="#" class="email">
+                <img src="./images/logo1.png" alt="Email Logo" class="email-logo"> Sign in with Google
+            </a>
+            <div class="or-container">
+                <hr><span>or</span><hr>
+            </div>
+            <a href="login.html" class="Create-account">Already have an account?
+                <span class="account">Login</span>
+            </a>
+        </form>
+    </div>
+</body>
+</html>
