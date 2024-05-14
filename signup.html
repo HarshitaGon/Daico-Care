@@ -5,11 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="login.css">
+    <script>
+        function showMedicalDetails(type) {
+            var medicalDetails = document.getElementById("medical-details");
+            if (type === 'blood-pressure') {
+                medicalDetails.innerHTML = `
+                    <div class="medical-detail">
+                        <label for="weight">Weight (kg)</label>
+                        <input type="number" id="weight" name="weight" placeholder="Weight (kg)" required>
+                    </div>
+                    <div class="medical-detail">
+                        <label for="blood-sugar">Blood Sugar Levels (mg/dl)</label>
+                        <input type="number" id="blood-sugar" name="blood-sugar" placeholder="Blood Sugar Levels (mg/dl)" required>
+                    </div>
+                    <div class="medical-detail">
+                        <label for="pressure">Blood Pressure (mm Hg)</label>
+                        <input type="fraction" id="pressure" name="pressure" placeholder="Blood Pressure (mm Hg)" required>
+                    </div>
+                    <div class="medical-detail">
+                        <label for="hba1c">HbA1c Levels (%)</label>
+                        <input type="number" id="hba1c" name="hba1c" placeholder="HbA1c Levels (%)" required>
+                    </div>
+                    <div class="medical-detail">
+                        <label for="cholesterol">Cholesterol Levels (mg/dl)</label>
+                        <input type="number" id="cholesterol" name="cholesterol" placeholder="Cholesterol Levels (mg/dl)" required>
+                    </div>
+                `;
+            } else if (type === 'blood-sugar') {
+                medicalDetails.innerHTML = `
+                    <div class="medical-detail">
+                        <label for="weight">Weight (kg)</label>
+                        <input type="number" id="weight" name="weight" placeholder="Weight (kg)" required>
+                    </div>
+                    <div class="medical-detail">
+                        <label for="pressure">Blood Pressure (mm Hg)</label>
+                        <input type="fraction" id="pressure" name="pressure" placeholder="Blood Pressure (mm Hg)" required>
+                    </div>
+                    <div class="medical-detail">
+                        <label for="hba1c">HbA1c Levels (%)</label>
+                        <input type="number" id="hba1c" name="hba1c" placeholder="HbA1c Levels (%)" required>
+                    </div>
+                    <div class="medical-detail">
+                        <label for="cholesterol">Cholesterol Levels (mg/dl)</label>
+                        <input type="number" id="cholesterol" name="cholesterol" placeholder="Cholesterol Levels (mg/dl)" required>
+                    </div>
+                `;
+            } else if (type === 'cholesterol') {
+                medicalDetails.innerHTML = `
+                    <div class="medical-detail">
+                        <label for="weight">Weight (kg)</label>
+                        <input type="number" id="weight" name="weight" placeholder="Weight (kg)" required>
+                    </div>
+                    <div class="medical-detail">
+                        <label for="blood-sugar">Blood Sugar Levels (mg/dl)</label>
+                        <input type="number" id="blood-sugar" name="blood-sugar" placeholder="Blood Sugar Levels (mg/dl)" required>
+                    </div>
+                    <div class="medical-detail">
+                        <label for="pressure">Blood Pressure (mm Hg)</label>
+                        <input type="fraction" id="pressure" name="pressure" placeholder="Blood Pressure (mm Hg)" required>
+                    </div>
+                    <div class="medical-detail">
+                        <label for="hba1c">HbA1c Levels (%)</label>
+                        <input type="number" id="hba1c" name="hba1c" placeholder="HbA1c Levels (%)" required>
+                    </div>
+                `;
+            }
+            medicalDetails.style.display = "block";
+        }
+    </script>
 </head>
 <body>
     <div class="container">
-        <!-- <img src="your_logo.png" alt="Company Logo" class="avatar"> -->
-        <h1>sign up</h1>
+        <h1>Sign Up</h1>
         <form action="./dashboard.html">
             <div class="phone-container">
                 <label for="phone"></label>
@@ -19,25 +86,16 @@
                 <label for="password"></label>
                 <input type="password" id="password" name="password" placeholder="Email" required>
             </div>
-            <div>
-                <h2>Medical details</h2>
-                <div class="sugar-level">
-                    <label for="blood-sugar"></label>
-                    <input type="number" id="blood-sugar" name="blood-sugar" placeholder="Blood Sugar Levels (mg/dl)" required>
-                </div>
-                <div class="hba1c-level">
-                    <label for="hba1c"></label>
-                    <input type="number" id="hba1c" name="hba1c" placeholder="HbA1c Levels (%)" required>
-                </div>
-                <div class="weight-container">
-                    <label for="weight"></label>
-                    <input type="number" id="weight" name="weight" placeholder="Weight (kg)" required>
-                </div>
-                <div class="blood-pressure">
-                    <label for="pressure"></label>
-                    <input type="fraction" id="pressure" name="pressure" placeholder="Blood Pressure (mm Hg)" required>
-                </div>
+            <h2>
+                <button class="bp" type="button" onclick="showMedicalDetails('blood-pressure')">Blood Pressure</button>
+                <button class="bp" type="button" onclick="showMedicalDetails('blood-sugar')">Blood Sugar</button>
+                <button class="bp" type="button" onclick="showMedicalDetails('cholesterol')">Cholesterol</button>
+            </h2>
+            <div id="medical-details" style="display: none;">
+                <!-- Medical details will be dynamically added here based on button clicked -->
             </div>
+            <!-- Rest of your form -->
+
             <div class="terms-agreement">
                 <input type="checkbox" id="agreement" name="agreement" required>
                 <label for="agreement">I agree to Diaco Care <span style="color: red;">Terms of Service</span>,

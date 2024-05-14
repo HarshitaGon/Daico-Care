@@ -25,11 +25,11 @@ medi.addEventListener("mouseenter", () => {
     detail.showModal();
 });
 
-document.addEventListener("mouseenter", () => {
+document.addEventListener("mouseleave", () => {
     detail.close();
 });
 
-chart.addEventListener("mouseenter", () => {
+chart.addEventListener("dblclick", () => {
     health.showModal();
 });
 
@@ -37,34 +37,34 @@ document.addEventListener("click", () => {
     health.close();
 });
 
-heart.addEventListener("mouseenter", () => {
+heart.addEventListener("dblclick", () => {
     box1.showModal();
 });
 
-heart.addEventListener("mouseleave", () => {
+heart.addEventListener("click", () => {
     box1.close();
 });
 
-kcal.addEventListener("mouseenter", () => {
+kcal.addEventListener("dblclick", () => {
     box2.showModal();
 });
 
-kcal.addEventListener("mouseleave", () => {
+kcal.addEventListener("click", () => {
     box2.close();
 });
 
-stress.addEventListener("mouseenter", () => {
+stress.addEventListener("dblclick", () => {
     box3.showModal();
 });
 
-stress.addEventListener("mouseleave", () => {
+stress.addEventListener("click", () => {
     box3.close();
 });
 
-steps.addEventListener("mouseenter", () => {
+steps.addEventListener("dblclick", () => {
     box4.showModal();
 });
 
-steps.addEventListener("mouseleave", () => {
+steps.addEventListener("click", () => {
     box4.close();
 });

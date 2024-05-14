@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workout and Diet Chart</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .chart-container {
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Workout and Diet Chart</h1>
+  <div class="chart-container">
+    <canvas id="workout-chart"></canvas>
+  </div>
+  <div class="chart-container">
+    <canvas id="diet-chart"></canvas>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // Function to generate random data for calories burned
+  function generateWorkoutData() {
+    const data = [];
+    const currentDate = new Date();
+    const daysInMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
+    for (let i = 1; i <= daysInMonth; i++) {
+      const calories = Math.floor(Math.random() * (3000 - 500) + 500);
+      data.push(calories);
+    }
+    return data;
+  }
+
+  // Function to generate random data for diet rating
+  function generateDietData() {
+    const data = [];
+    const currentDate = new Date();
+    const daysInMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
+    for (let i = 1; i <= daysInMonth; i++) {
+      const rating = Math.floor(Math.random() * 10) + 1;
+      data.push(rating);
+    }
+    return data;
+  }
+
+  // Initialize the workout chart
+  document.addEventListener("DOMContentLoaded", function () {
+    const workoutData = generateWorkoutData();
+    const dietData = generateDietData();
+
+    // Workout chart
+    new Chart(document.getElementById('workout-chart'), {
+      type: 'line',
+      data: {
+        labels: Array.from({ length: workoutData.length }, (_, i) => i + 1),
+        datasets: [{
+          label: 'Calories Burned',
+          data: workoutData,
+          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+          borderColor: 'rgba(255, 99, 132, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+
+    // Diet chart
+    new Chart(document.getElementById('diet-chart'), {
+      type: 'line',
+      data: {
+        labels: Array.from({ length: dietData.length }, (_, i) => i + 1),
+        datasets: [{
+          label: 'Diet Rating',
+          data: dietData,
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true,
+              max: 10 // Maximum rating value
+            }
+          }]
+        }
+      }
+    });
+  });
+</script>
+</body>
+</html>
