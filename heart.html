@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BT Heart Monitor</title>
+    <link rel="stylesheet" href="heart.css" />
+  </head>
+  <body>
+    <div class="connect-ui">
+      <button class="connect">connect</button>
+      <div>
+        No heart monitor device?
+        <a
+          href="https://github.com/megaconfidence/bt-heart-monitor#set-up-a-heart-monitor-emulator"
+          target="_blank"
+          >Set up an emulator</a
+        >
+      </div>
+      <div class="error hide">
+        ⚠️ This browser does not support the Web Bluetooth API. Please try a
+        different browser
+      </div>
+    </div>
+    <div class="ui hide">
+      <div class="heart">
+        <img src="heart.png" />
+        <audio src="heartbeat.mp3" loop></audio>
+        <div class="bpm">--</div>
+      </div>
+      <button class="start">start</button>
+      <button class="stop">stop</button>
+    </div>
+    <script src="heart.js"></script>
+  </body>
+</html>
